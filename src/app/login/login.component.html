@@ -1,0 +1,27 @@
+
+<mat-card class="card-position">
+
+    <mat-card-header>
+
+        <mat-card-title><h1 class="login-title">Login to Skill Trade</h1></mat-card-title>
+
+    </mat-card-header>
+
+  <div class="login-container">
+
+    <mat-form-field class="input-spacing">
+      <input matInput placeholder="Enter your email" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-spacing">
+      <input matInput placeholder="Enter your password" [formControl]="password" [type]="hide ? 'password' : 'text'" required>
+      <mat-icon class="visibilityIcon" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <mat-error *ngIf="password.invalid">{{getPassWordErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" [disabled]="email.invalid || password.invalid">Submit</button>
+
+  </div>
+
+</mat-card>

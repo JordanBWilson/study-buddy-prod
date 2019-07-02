@@ -1,0 +1,61 @@
+<div class="stepper-container">
+  <mat-vertical-stepper class="sign-up-stepper" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>What's Your Username?</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Username" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>What's Your Email Address?</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="email@email.com" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>What's Your Password?</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Password" formControlName="thirdCtrl" [type]="hidePass1 ? 'password' : 'text'" required>
+          <mat-icon class="visibilityIcon" matSuffix (click)="hidePass1 = !hidePass1">{{hidePass1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup">
+        <form [formGroup]="fourthFormGroup">
+          <ng-template matStepLabel>Confirm Your Password.</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Password" formControlName="fourthCtrl" [type]="hidePass2 ? 'password' : 'text'" required>
+            <mat-icon class="visibilityIcon" matSuffix (click)="hidePass2 = !hidePass2">{{hidePass2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>Is all of this information correct?</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">It's All Correct</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>

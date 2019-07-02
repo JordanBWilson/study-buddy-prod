@@ -1,0 +1,35 @@
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-container > * {
+    width: 100%;
+  }
+
+  .card-position {
+
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+
+  .input-spacing {
+
+    padding-bottom: 4%;
+  }
+
+  .visibilityIcon {
+
+    cursor: pointer;
+  }
+
+  .login-title { 
+
+    font-size: 1.32em;
+    // font-size: 3.3vh;
+    // font-size: 3.3vw;
+
+    //font-size: 1.65vh;
+  }
