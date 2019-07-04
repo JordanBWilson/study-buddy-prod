@@ -28,3 +28,20 @@
 
     padding-bottom: 5%;
 }
+.landing-contents {
+
+    // height: calc(100% - 500px);
+}
+
+.landing-footer {
+
+    background-color: #673ab7;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    // left: -15px;
+    text-align: center;
+    // top: -36px;
+    z-index: -1;
+    padding-right: 30px;
+}

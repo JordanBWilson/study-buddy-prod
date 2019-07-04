@@ -16,3 +16,8 @@ body{
     -webkit-tap-highlight-color: transparent;
     outline: none;
 }
+
+.mat-tab-group {
+
+    height: calc(36em - 235px); //520px;
+}
