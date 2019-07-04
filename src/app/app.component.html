@@ -1,26 +1,26 @@
 
-<div id="menu-wrapper">
+<!-- <div id="menu-wrapper">
 
   <mat-toolbar color="primary">
 
     <div id="menu-width">
-    <span *ngIf="isLogoVisible" class="logo-container">
-      <span class="noSelect" *ngIf="!IsLogin" routerLink="/landing"><mat-icon class="logo">assignment</mat-icon></span> <!--Skill Trade-->
-      <span class="noSelect" *ngIf="IsLogin"><mat-icon>assignment</mat-icon></span>
+    <span class="logo-container">
+      <span class="noSelect" routerLink="/landing"><mat-icon class="logo">assignment</mat-icon></span>
+      <span class="noSelect"><mat-icon>assignment</mat-icon></span>
     </span>
 
-    <span *ngIf="!isLogoVisible">
+    <span>
 
-      <span class="noSelect" *ngIf="!IsLogin" routerLink="/landing"> Study Buddy</span>
+      <span class="noSelect" routerLink="/landing"> Study Buddy</span>
     </span>
 
-    <span *ngIf="!IsLogin" class="title-menu noSelect" mat-icon-button [matMenuTriggerFor]="landingMenu">
+    <span class="title-menu noSelect" mat-icon-button [matMenuTriggerFor]="landingMenu">
       <mat-icon>supervised_user_circle</mat-icon>
     </span>
 
     <mat-menu #landingMenu="matMenu">
         <button mat-menu-item routerLink="/login-in">
-          <mat-icon>person</mat-icon> <!--portrait-->
+          <mat-icon>person</mat-icon>
           <span>Login</span>
         </button>
         <button mat-menu-item routerLink="/sign-up">
@@ -39,25 +39,21 @@
         <span>My Account</span>
       </button>
       <button mat-menu-item>
-        <mat-icon>how_to_reg</mat-icon> <!--face-->
+        <mat-icon>how_to_reg</mat-icon>
         <span>Find a Professional</span>
       </button>
-      <!-- <button mat-menu-item disabled>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
-      </button> -->
     </mat-menu>
 
   </div>
     
   </mat-toolbar>
 
-</div>
+</div> -->
 
 
 <div class="route-spacing">
 
-    <router-outlet (activate)="componentAdded($event)"></router-outlet>
+    <router-outlet></router-outlet>
 
 </div>
 

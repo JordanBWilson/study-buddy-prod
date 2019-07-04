@@ -8,19 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Skill Trade';
 
-  IsLogin = false;
-  isLogoVisible = true;
-
-  componentAdded(event) {
-
-    if (event.page === 'Landing') {
-
-      this.isLogoVisible = false;
-    }
-    else {
-      this.isLogoVisible = true;
-    }
-  }
 }
 
   //git commands
@@ -32,5 +19,7 @@ export class AppComponent {
   //ng generate component _Name_<-- make a new component
 
   //git publish commands
-  //ng build --prod --base-href "/skill-trade/"
-  //npx ngh --name="JordanBWilson" --email=jordanblairwilson@gmail.com --no-silent --dir=dist/skill-trade
+  // update the git config file. the path... '<project_root>/.git/config'
+  // add something to the effect of url = https://JordanBWilson:Hungary69@github.com/JordanBWilson/study-buddy.git
+  //ng build --prod --base-href "/study-buddy/"
+  //npx ngh --name="JordanBWilson" --email=jordanblairwilson@gmail.com --no-silent --dir=dist/study-buddy
