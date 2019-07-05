@@ -14,7 +14,11 @@ const routes: Routes = [
   // { path: 'philosophy', 
   //   loadChildren: './philosophy/philosophy.module#PhilosophyModule'
   // },
-  { path: '',   
+  { path: '',
+    redirectTo: '/study-buddy/landing', 
+    pathMatch: 'full' 
+  },
+  { path: '',
     redirectTo: '/landing', 
     pathMatch: 'full' 
   },
