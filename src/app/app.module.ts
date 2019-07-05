@@ -4,7 +4,7 @@ import { HttpClientModule } from  '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, BottomSheetGlobalNavigation } from './app.component';
 import {MatIconModule} from '@angular/material/icon';
 import {
   //MatAutocompleteModule,
@@ -49,8 +49,10 @@ import {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BottomSheetGlobalNavigation
   ],
+  entryComponents: [AppComponent, BottomSheetGlobalNavigation],
   imports: [
     BrowserModule,
     AppRoutingModule,

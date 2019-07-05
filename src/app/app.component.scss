@@ -1,31 +1,32 @@
 
-// #menu-wrapper{
-
-//     width: 100%;
-//     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
-// }
-
-// #menu-width{
-
-//     width: 100%;
-// }
-
-// .title-menu{
-
-//     cursor: pointer;
-//     display: flex;
-//     float: right;
-//     padding-top: 5px;
-// }
-
 .route-spacing{
 
     padding: 15px;
     height: calc(100% - 300px);
 }
 
-// .logo {
+.headline {
 
-//     cursor: pointer;
-//     padding-top: 5px;
-// }
+    background-color: #673ab7;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    z-index: -1;
+    padding-right: 30px;
+    padding-top: 6px;
+    padding-left: 12px;
+}
+
+#menu-width{
+
+    padding-top: 3%;
+}
+
+.navi {
+
+    margin: 0 auto;
+    display: block;
+    position: sticky;
+    margin-top: 8%;
+}

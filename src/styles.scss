@@ -21,3 +21,13 @@ body{
 
     height: calc(36em - 14.2em); //520px;
 }
+
+.mat-bottom-sheet-container {
+
+    background-color: #673ab7;
+}
+
+.mat-list-base .mat-list-item .mat-list-text, .mat-list-base .mat-list-option .mat-list-text {
+
+    color: white;
+}

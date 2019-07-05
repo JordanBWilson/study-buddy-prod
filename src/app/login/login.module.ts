@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ]
 })
 export class LoginModule { }

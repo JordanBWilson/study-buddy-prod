@@ -11,13 +11,6 @@ const routes: Routes = [
   { path: 'sign-up', 
     loadChildren: './sign-up/sign-up.module#SignUpModule'
   },
-  // { path: 'philosophy', 
-  //   loadChildren: './philosophy/philosophy.module#PhilosophyModule'
-  // },
-  { path: '',
-    redirectTo: '/study-buddy/landing', 
-    pathMatch: 'full' 
-  },
   { path: '',
     redirectTo: '/landing', 
     pathMatch: 'full' 

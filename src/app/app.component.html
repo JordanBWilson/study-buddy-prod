@@ -1,59 +1,23 @@
 
-<!-- <div id="menu-wrapper">
+<div id="menu-wrapper" *ngIf="isLogoVisible">
 
-  <mat-toolbar color="primary">
-
-    <div id="menu-width">
-    <span class="logo-container">
-      <span class="noSelect" routerLink="/landing"><mat-icon class="logo">assignment</mat-icon></span>
-      <span class="noSelect"><mat-icon>assignment</mat-icon></span>
-    </span>
-
-    <span>
-
-      <span class="noSelect" routerLink="/landing"> Study Buddy</span>
-    </span>
-
-    <span class="title-menu noSelect" mat-icon-button [matMenuTriggerFor]="landingMenu">
-      <mat-icon>supervised_user_circle</mat-icon>
-    </span>
-
-    <mat-menu #landingMenu="matMenu">
-        <button mat-menu-item routerLink="/login-in">
-          <mat-icon>person</mat-icon>
-          <span>Login</span>
-        </button>
-        <button mat-menu-item routerLink="/sign-up">
-          <mat-icon>person_add</mat-icon>
-          <span>Sign Up</span>
-        </button>
-    </mat-menu>
+    <mat-toolbar color="primary">
   
-    <span *ngIf="IsLogin" class="title-menu noSelect" mat-icon-button [matMenuTriggerFor]="mainMenu">
-      <mat-icon>more_vert</mat-icon>
-    </span>
-
-    <mat-menu #mainMenu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>settings</mat-icon>
-        <span>My Account</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>how_to_reg</mat-icon>
-        <span>Find a Professional</span>
-      </button>
-    </mat-menu>
-
+      <div id="menu-width">
+      <span class="logo-container">
+        <span class="noSelect" routerLink="/landing"><mat-icon class="logo">assignment</mat-icon></span>
+      </span>
+  
+    </div>
+      
+    </mat-toolbar>
+  
   </div>
-    
-  </mat-toolbar>
-
-</div> -->
-
 
 <div class="route-spacing">
 
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="componentAdded($event)"></router-outlet>
+
+    <button class="navi" mat-raised-button (click)="openBottomSheet()">Navigation</button>
 
 </div>
-
