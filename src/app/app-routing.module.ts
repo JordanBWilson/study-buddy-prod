@@ -3,7 +3,8 @@ import { Routes, RouterModule, PreloadAllModules  } from '@angular/router';
 
 const routes: Routes = [
   { path: 'landing', 
-    loadChildren: './landing-page/landing-page.module#LandingPageModule'
+    loadChildren: './landing-page/landing-page.module#LandingPageModule',
+    pathMatch: 'full'
   },
   { path: 'login-in', 
     loadChildren: './login/login.module#LoginModule'

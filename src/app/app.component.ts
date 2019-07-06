@@ -53,5 +53,5 @@ export class BottomSheetGlobalNavigation {
   //git publish commands
   // update the git config file. the path... '<project_root>/.git/config'
   // add something to the effect of url = https://JordanBWilson:Hungary69@github.com/JordanBWilson/study-buddy.git
-  //ng build --prod --base-href "/study-buddy/"
-  //npx ngh --name="JordanBWilson" --email=jordanblairwilson@gmail.com --no-silent --dir=dist/study-buddy
+  //ng build --prod --base-href "/study-buddy-prod/"
+  //npx ngh --name="JordanBWilson" --email=jordanblairwilson@gmail.com --no-silent --dir=dist/study-buddy-prod
