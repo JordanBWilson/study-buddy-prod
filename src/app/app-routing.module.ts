@@ -12,6 +12,9 @@ const routes: Routes = [
   { path: 'sign-up', 
     loadChildren: './sign-up/sign-up.module#SignUpModule'
   },
+  { path: 'dashboard', 
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  },
   { path: '',
     redirectTo: '/landing', 
     pathMatch: 'full' 

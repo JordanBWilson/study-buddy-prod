@@ -1,5 +1,10 @@
 
 <mat-nav-list>
+    <a routerLink="/landing" mat-list-item (click)="openLink($event)">
+        <span mat-line>Home Page</span>
+        <span mat-line>What We Are All About</span>
+    </a>
+
     <a routerLink="/login-in" mat-list-item (click)="openLink($event)">
         <span mat-line>Login</span>
         <span mat-line>Continue Your Adventure</span>

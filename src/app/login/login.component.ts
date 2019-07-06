@@ -16,19 +16,19 @@ export class LoginComponent implements OnInit {
   // private pos: object;
   // public isPositioned: boolean = false;
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  email = new FormControl('', [Validators.required]); // , Validators.email
   password = new FormControl('', [Validators.required]);
   hide = true;
   page = 'Login';
 
-  getEmailErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-        this.email.hasError('email') ? 'Not a valid email' : '';
-  }
+  // getEmailErrorMessage() {
+  //   return this.email.hasError('required') ? 'You must enter a value' :
+  //       this.email.hasError('email') ? 'Not a valid email' : '';
+  // }
 
-  getPassWordErrorMessage() {
-    return this.password.hasError('required') ? 'You must enter a value' : '';
-  }
+  // getPassWordErrorMessage() {
+  //   return this.password.hasError('required') ? 'You must enter a value' : '';
+  // }
 
 
   ngOnInit() {
