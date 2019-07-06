@@ -25,6 +25,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
 
     preloadingStrategy: PreloadAllModules // <-This will load the other modules once the first module loads
+    //
   }
     
     )],
