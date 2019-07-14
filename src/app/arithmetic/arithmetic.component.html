@@ -1,0 +1,11 @@
+
+
+<div class="problem-wrapper">
+
+  <p class="problem-item" *ngFor="let prob of currentProblem">{{prob}}</p>
+
+  <p class="problem-item">{{currentTypeProblem}}</p>
+
+  <button mat-flat-button color="primary" (click)="generateNextProblem()">New Problem</button>
+
+</div>

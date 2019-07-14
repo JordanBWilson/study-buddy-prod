@@ -12,10 +12,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 // import { PhilosophyComponent } from './philosophy/philosophy.component';
 // import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ArithmeticComponent } from '../arithmetic/arithmetic.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
+    ArithmeticComponent
     // PhilosophyComponent,
     // WelcomePageComponent
   ],
