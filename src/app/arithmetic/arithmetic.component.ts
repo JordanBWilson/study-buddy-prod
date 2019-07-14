@@ -15,7 +15,7 @@ export class ArithmeticComponent implements OnInit {
 
   public currentProblem: Array<number>;
   public currentTypeProblem: string;
-  public currentAnswer: number;
+  public currentAnswer = 0;
   public userAttempt: number;
 
   constructor() { }
@@ -40,21 +40,34 @@ export class ArithmeticComponent implements OnInit {
     this.currentProblem = problemContainer;
     this.currentTypeProblem = this.typeOfProblem[currentType];
 
+    this.getCurrentAnswer();
+
   }
 
   getCurrentAnswer() {
+
+    this.currentAnswer = 0;
 
     for (let i = 0; i < this.currentProblem.length; i++) {
 
       if (this.currentTypeProblem === '+' ) {
 
-
+        this.currentAnswer += this.currentProblem[i];
       }
       if (this.currentTypeProblem === '-' ) {
 
-        
+        if (i === 0) {
+
+          this.currentAnswer = this.currentProblem[i];
+        } else {
+
+          this.currentAnswer -= this.currentProblem[i];
+        }
       }
+
     }
+
+    console.log(this.currentAnswer);
   }
 
 }
