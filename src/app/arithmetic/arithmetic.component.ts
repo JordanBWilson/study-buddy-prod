@@ -11,7 +11,7 @@ export class ArithmeticComponent implements OnInit {
   public upperRange = 10;
   public lowerRange = 1;
   public partsNumber = 2;
-  public typeOfProblem = ['+', '-'];
+  public typeOfProblem = ['+', '-', 'X', '/'];
 
   public currentProblem: Array<number>;
   public currentTypeProblem: string;
@@ -50,11 +50,11 @@ export class ArithmeticComponent implements OnInit {
 
     for (let i = 0; i < this.currentProblem.length; i++) {
 
-      if (this.currentTypeProblem === '+' ) {
+      if (this.currentTypeProblem === '+') {
 
         this.currentAnswer += this.currentProblem[i];
       }
-      if (this.currentTypeProblem === '-' ) {
+      else if (this.currentTypeProblem === '-') {
 
         if (i === 0) {
 
@@ -62,6 +62,24 @@ export class ArithmeticComponent implements OnInit {
         } else {
 
           this.currentAnswer -= this.currentProblem[i];
+        }
+      } else if (this.currentTypeProblem === 'X') {
+
+        if (i === 0) {
+
+          this.currentAnswer = this.currentProblem[i];
+        } else {
+
+          this.currentAnswer *= this.currentProblem[i];
+        }
+      } else if (this.currentTypeProblem === '/') {
+
+        if (i === 0) {
+
+          this.currentAnswer = this.currentProblem[i];
+        } else {
+
+          this.currentAnswer /= this.currentProblem[i];
         }
       }
 
