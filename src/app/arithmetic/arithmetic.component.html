@@ -1,10 +1,28 @@
 
 
-<div class="problem-wrapper">
+<div class="problem-wrapper" *ngIf="currentTypeProblem">
 
-  <p class="problem-item" *ngFor="let prob of currentProblem">{{prob}}</p>
+  <div class="add-sub-mult-wrapper" *ngIf="currentTypeProblem === '+' || currentTypeProblem === '-' || currentTypeProblem === 'x'">
 
-  <p class="problem-item">{{currentTypeProblem}}</p>
+    <p class="problem-item" *ngFor="let prob of currentProblem; let i=index" [class.problem-underline]="i + 1 === currentProblem.length">{{prob}}</p>
+
+    <p class="problem-item problem-type-pos">{{currentTypeProblem}}</p>
+
+  </div>
+
+  <div class="division-wrapper" *ngIf="currentTypeProblem ==='/'">
+
+    <span class="problem-item-division" *ngFor="let prob of currentProblem; let i=index">
+
+      <span class="division-left" *ngIf="i + 1 !== currentProblem.length">{{prob}}</span> 
+      <span class="division-right" *ngIf="i + 1 === currentProblem.length">{{prob}}</span>
+    </span>
+
+  </div>
+
+  <mat-form-field>
+    <input matInput placeholder="Put Your Answer Here">
+  </mat-form-field>
 
   <button mat-flat-button color="primary" (click)="generateNextProblem()">New Problem</button>
 

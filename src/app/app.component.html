@@ -18,6 +18,6 @@
 
     <router-outlet (activate)="componentAdded($event)"></router-outlet>
 
-    <button class="navi" mat-raised-button (click)="openBottomSheet()">Navigation</button>
+    <button class="navi" mat-raised-button *ngIf="isNavVisible" (click)="openBottomSheet()">Navigation</button>
 
 </div>

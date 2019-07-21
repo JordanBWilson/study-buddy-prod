@@ -9,6 +9,7 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
 export class AppComponent {
   title = 'Study Buddy';
   isLogoVisible = false;
+  isNavVisible = false;
 
   constructor(private bottomSheet: MatBottomSheet) {}
 
@@ -25,6 +26,8 @@ export class AppComponent {
     else {
       this.isLogoVisible = true;
     }
+
+    this.isNavVisible = true;
   }
 
 }
