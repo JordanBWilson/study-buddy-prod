@@ -16,7 +16,10 @@ export class ArithmeticComponent implements OnInit {
   public currentProblem: Array<number>;
   public currentTypeProblem: string;
   public currentAnswer = 0;
-  public userAttempt: number;
+  public userAttempt = '';
+  public displayCheckAnswerButton = false;
+  public answerCorrect = false;
+  public displayAnswerMessage = false;
 
   constructor() { }
 
@@ -28,6 +31,7 @@ export class ArithmeticComponent implements OnInit {
   generateNextProblem() {
 
     const problemContainer = [];
+    this.userAttempt = '';
 
     for (let i = 0; i < this.partsNumber; i++) {
 
@@ -86,6 +90,46 @@ export class ArithmeticComponent implements OnInit {
     }
 
     console.log(this.currentAnswer);
+  }
+
+  detectUserInput(event: string) {
+
+    if (event !== '') {
+
+      this.displayCheckAnswerButton = true;
+    } else {
+
+      this.displayCheckAnswerButton = false;
+    }
+  }
+
+  checkAnswer() {
+
+    const roundCurrentAnswer = this.currentAnswer.toFixed(2);
+
+    console.log(roundCurrentAnswer);
+
+    if (+this.userAttempt === +roundCurrentAnswer) {
+
+      this.displayCheckAnswerButton = false;
+      this.answerCorrect = true;
+      this.displayAnswerMessage = true;
+    } else {
+
+      this.answerCorrect = false;
+      this.displayAnswerMessage = true;
+    }
+  }
+
+  closeDialog() {
+
+    if (this.answerCorrect) {
+
+      this.generateNextProblem();
+    }
+
+    this.answerCorrect = false;
+    this.displayAnswerMessage = false;
   }
 
 }

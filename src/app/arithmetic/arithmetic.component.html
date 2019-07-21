@@ -2,6 +2,8 @@
 
 <div class="problem-wrapper" *ngIf="currentTypeProblem">
 
+  <button class="new-problem-btn" mat-raised-button (click)="generateNextProblem()">New Problem</button>
+
   <div class="add-sub-mult-wrapper" *ngIf="currentTypeProblem === '+' || currentTypeProblem === '-' || currentTypeProblem === 'x'">
 
     <p class="problem-item" *ngFor="let prob of currentProblem; let i=index" [class.problem-underline]="i + 1 === currentProblem.length">{{prob}}</p>
@@ -12,6 +14,8 @@
 
   <div class="division-wrapper" *ngIf="currentTypeProblem ==='/'">
 
+    <p class="round-division-message">Round your answer to the nearest hundredth</p>
+
     <span class="problem-item-division" *ngFor="let prob of currentProblem; let i=index">
 
       <span class="division-left" *ngIf="i + 1 !== currentProblem.length">{{prob}}</span> 
@@ -21,9 +25,25 @@
   </div>
 
   <mat-form-field>
-    <input matInput placeholder="Put Your Answer Here">
+    <input matInput placeholder="Put Your Answer Here" [(ngModel)]="userAttempt" (ngModelChange)="detectUserInput($event)">
   </mat-form-field>
 
-  <button mat-flat-button color="primary" (click)="generateNextProblem()">New Problem</button>
+  <button class="check-answer-btn" mat-raised-button color="primary" *ngIf="displayCheckAnswerButton" (click)="checkAnswer()">Check Your Answer</button>
+
+</div>
+
+<div class="correct-answer-wrapper" *ngIf="answerCorrect && displayAnswerMessage">
+
+  <h1>You Got The Right Answer!!!</h1>
+
+  <button class="new-problem-btn" mat-raised-button color="primary" (click)="closeDialog()">Awesome!</button>
+
+</div>
+
+<div class="wrong-answer-wrapper" *ngIf="!answerCorrect && displayAnswerMessage">
+
+  <h1>That's Not Right... Try Again.</h1>
+
+  <button class="new-problem-btn" mat-raised-button color="warn" (click)="closeDialog()">Ok...</button>
 
 </div>

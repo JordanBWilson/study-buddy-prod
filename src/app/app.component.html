@@ -14,10 +14,12 @@
   
   </div>
 
-<div class="route-spacing">
+<div id="router-wrapper" class="route-spacing">
 
     <router-outlet (activate)="componentAdded($event)"></router-outlet>
 
-    <button class="navi" mat-raised-button *ngIf="isNavVisible" (click)="openBottomSheet()">Navigation</button>
-
 </div>
+
+<button id="navigator" class="navi" mat-raised-button *ngIf="isNavVisible" (click)="openBottomSheet()">Navigation</button>
+
+<!--[style.marginTop.px]="routerMarginTop" This might make the nav button look on all the screens-->

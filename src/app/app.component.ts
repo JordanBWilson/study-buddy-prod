@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Study Buddy';
   isLogoVisible = false;
   isNavVisible = false;
+  // routerMarginTop = 0;
 
   constructor(private bottomSheet: MatBottomSheet) {}
 
@@ -28,6 +29,13 @@ export class AppComponent {
     }
 
     this.isNavVisible = true;
+
+    // this.routerMarginTop = 0;
+
+    // setTimeout(() => {
+    //   this.routerMarginTop = document.getElementById('router-wrapper').clientHeight;
+    //   console.log(this.routerMarginTop);
+    // }, 0);
   }
 
 }
