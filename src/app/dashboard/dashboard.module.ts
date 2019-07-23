@@ -10,16 +10,14 @@ import { MatInputModule, MatTabsModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-// import { PhilosophyComponent } from './philosophy/philosophy.component';
-// import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { ArithmeticComponent } from '../arithmetic/arithmetic.component';
+import { ArithmeticComponent } from '../math-generator/arithmetic/arithmetic.component';
+import { ProbValidModalComponent } from '../shared/prob-valid-modal/prob-valid-modal.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    ArithmeticComponent
-    // PhilosophyComponent,
-    // WelcomePageComponent
+    ArithmeticComponent,
+    ProbValidModalComponent
   ],
   imports: [
     DashboardRoutingModule,

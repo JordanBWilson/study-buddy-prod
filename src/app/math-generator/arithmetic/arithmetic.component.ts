@@ -20,6 +20,11 @@ export class ArithmeticComponent implements OnInit {
   public displayCheckAnswerButton = false;
   public answerCorrect = false;
   public displayAnswerMessage = false;
+  public modalMesage: string;
+  public buttonLabel: string;
+  public buttonColor: string;
+
+
 
   constructor() { }
 
@@ -114,10 +119,16 @@ export class ArithmeticComponent implements OnInit {
       this.displayCheckAnswerButton = false;
       this.answerCorrect = true;
       this.displayAnswerMessage = true;
+      this.modalMesage = 'You Got The Right Answer!!!';
+      this.buttonLabel = 'Awesome!';
+      this.buttonColor = 'primary';
     } else {
 
       this.answerCorrect = false;
       this.displayAnswerMessage = true;
+      this.modalMesage = 'That Is Not Right... Try Again.';
+      this.buttonLabel = 'Ok...';
+      this.buttonColor = 'warn';
     }
   }
 
