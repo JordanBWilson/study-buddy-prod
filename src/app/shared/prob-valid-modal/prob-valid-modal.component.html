@@ -1,5 +1,5 @@
 
-<div class="prob-valid-wrapper correct-answer-wrapper">
+<div class="prob-valid-wrapper" [ngClass]="{'correct-answer-wrapper': isValid, 'wrong-answer-wrapper': !isValid}">
 
   <h3 class="modal-message">{{modalMessage}}</h3>
 
