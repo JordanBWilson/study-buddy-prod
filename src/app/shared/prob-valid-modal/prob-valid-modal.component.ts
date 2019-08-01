@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-prob-valid-modal',
@@ -13,8 +13,15 @@ export class ProbValidModalComponent implements OnInit {
   @Input() buttonLabel: string;
   @Input() isValid: boolean;
   @Input() buttonColor: string;
+  @Output() isClicked = new EventEmitter();
 
   ngOnInit() {
+
+  }
+
+  closeDialog() {
+
+    this.isClicked.emit(true);
   }
 
 }

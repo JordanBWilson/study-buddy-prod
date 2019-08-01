@@ -37,7 +37,7 @@
   <!-- <h1>You Got The Right Answer!!!</h1>
 
   <button class="new-problem-btn" mat-raised-button color="primary" (click)="closeDialog()">Awesome!</button> -->
-  <app-prob-valid-modal [modalMessage]="modalMesage" [buttonLabel]="buttonLabel" [isValid]="answerCorrect" [buttonColor]="buttonColor">
+  <app-prob-valid-modal (isClicked)="closeDialog($event)" [modalMessage]="modalMesage" [buttonLabel]="buttonLabel" [isValid]="answerCorrect" [buttonColor]="buttonColor">
 
   </app-prob-valid-modal>
 
@@ -48,7 +48,7 @@
   <!-- <h1>That's Not Right... Try Again.</h1>
 
   <button class="new-problem-btn" mat-raised-button color="warn" (click)="closeDialog()">Ok...</button> -->
-  <app-prob-valid-modal [modalMessage]="modalMesage" [buttonLabel]="buttonLabel" [isValid]="answerCorrect" [buttonColor]="buttonColor">
+  <app-prob-valid-modal (isClicked)="closeDialog($event)" [modalMessage]="modalMesage" [buttonLabel]="buttonLabel" [isValid]="answerCorrect" [buttonColor]="buttonColor">
     
   </app-prob-valid-modal>
 

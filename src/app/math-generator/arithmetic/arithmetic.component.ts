@@ -56,14 +56,14 @@ export class ArithmeticComponent implements OnInit {
   getCurrentAnswer() {
 
     this.currentAnswer = 0;
+    const newDivideArray = [];
 
     for (let i = 0; i < this.currentProblem.length; i++) {
 
       if (this.currentTypeProblem === '+') {
 
         this.currentAnswer += this.currentProblem[i];
-      }
-      else if (this.currentTypeProblem === '-') {
+      } else if (this.currentTypeProblem === '-') {
 
         if (i === 0) {
 
@@ -86,9 +86,12 @@ export class ArithmeticComponent implements OnInit {
         if (i === 0) {
 
           this.currentAnswer = this.currentProblem[i];
+          newDivideArray.push(this.currentProblem[i]);
         } else {
 
           this.currentAnswer /= this.currentProblem[i];
+          newDivideArray.unshift(this.currentProblem[i]);
+          this.currentProblem = newDivideArray;
         }
       }
 
@@ -132,7 +135,9 @@ export class ArithmeticComponent implements OnInit {
     }
   }
 
-  closeDialog() {
+  closeDialog(event: boolean) {
+
+    this.answerCorrect = event;
 
     if (this.answerCorrect) {
 
