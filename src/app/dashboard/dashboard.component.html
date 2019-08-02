@@ -1,8 +1,13 @@
 
-<h1 class="dash-title">Arithmetic Example</h1>
+<!-- <h1 class="dash-title">Choose Your Adventure</h1> -->
 
 <div class="content-wrapper">
 
-    <app-arithmetic></app-arithmetic>
+    <!-- <app-arithmetic></app-arithmetic> -->
+    <div *ngIf="!adventureChosen">
+
+        <app-adventure-modal></app-adventure-modal>
+
+    </div>
 
 </div>
