@@ -1,12 +1,34 @@
 
-<!-- <h1 class="dash-title">Choose Your Adventure</h1> -->
+<h1 class="dash-title">Let's Begin</h1>
 
 <div class="content-wrapper">
 
     <!-- <app-arithmetic></app-arithmetic> -->
     <div *ngIf="!adventureChosen">
 
-        <app-adventure-modal></app-adventure-modal>
+        <app-adventure-modal (selectedAdventureEmit)="newAdventure($event)"></app-adventure-modal>
+
+    </div>
+
+    <!--Adventure maps below-->
+
+    <div *ngIf="adventureName === 'chef'" class="chef-adventure-wrapper">
+
+
+    </div>
+
+    <div *ngIf="adventureName === 'game-dev'" class="gameDev-adventure-wrapper">
+
+
+    </div>
+
+    <div *ngIf="adventureName === 'music'" class="music-adventure-wrapper">
+
+
+    </div>
+
+    <div *ngIf="adventureName === 'sports'" class="sports-adventure-wrapper">
+
 
     </div>
 

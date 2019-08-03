@@ -1,32 +1,43 @@
-<div class="modal">
+<div class="modal" [ngClass]="{'fade-out': adventureSelected}">
 
   <div class="adventure-wrapper">
 
     <h1 class="modal-message">Choose Your Adventure</h1>
 
-
-    <div class="story-wrapper">
-
-      <p class="story-title">Chef</p>
+    <div>
+      <h4 class="adventure-title"><span *ngIf="!selectedAdventure">Select Your Character</span>{{displaySelection}}</h4>
     </div>
 
-    <div class="story-wrapper">
 
-      <p class="story-title">Game Developer</p>
+    <div class="story-wrapper" (click)="selectAdventure('chef')" [ngClass]="{'selected-adv': selectedAdventure === 'chef'}">
+
+      <mat-icon class="adven-icon material-icons-outlined">restaurant</mat-icon>
+
+      <!-- <p class="story-title">Chef</p>  -->
     </div>
 
-    <div class="story-wrapper">
+    <div class="story-wrapper" (click)="selectAdventure('game-dev')" [ngClass]="{'selected-adv': selectedAdventure === 'game-dev'}">
 
-      <p class="story-title">Musician</p>
+      <mat-icon class="adven-icon">videogame_asset</mat-icon>
+      <!-- <p class="story-title">Game Developer</p> -->
     </div>
 
-    <div class="story-wrapper">
+    <div class="story-wrapper" (click)="selectAdventure('music')" [ngClass]="{'selected-adv': selectedAdventure === 'music'}">
 
-      <p class="story-title">Athlete</p>
+      <mat-icon class="adven-icon">queue_music</mat-icon>
+      <!-- <p class="story-title">Musician</p> -->
     </div>
 
-  
-    <!-- <button class="new-problem-btn" mat-raised-button color="{{buttonColor}}" (click)="closeDialog()">{{buttonLabel}}</button> -->
+    <div class="story-wrapper" (click)="selectAdventure('sports')" [ngClass]="{'selected-adv': selectedAdventure === 'sports'}">
+
+      <mat-icon class="adven-icon">golf_course</mat-icon>
+      <!-- <p class="story-title">Athlete</p> -->
+    </div>
+
+    <div class="select-btn-wrapper">
+
+        <button class="select-story-btn" mat-raised-button color="primary" [disabled]="!selectedAdventure" (click)="selectAdventureFinal()">Select</button>
+    </div>
   
   </div>
 

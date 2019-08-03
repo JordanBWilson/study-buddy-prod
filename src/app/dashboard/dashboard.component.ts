@@ -8,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   public adventureChosen = false;
+  public adventureName = '';
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  newAdventure(event: string) {
+
+    this.adventureName = event;
+    setTimeout(() => {
+      this.adventureChosen = true;
+    }, 1490); // this is the length of time the animation takes to complete
+
   }
 
 }
