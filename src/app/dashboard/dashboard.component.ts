@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
     this.adventureName = event;
     setTimeout(() => {
       this.adventureChosen = true;
-    }, 1490); // this is the length of time the animation takes to complete
+    }, 1450); // this is the length of time the animation takes to complete
 
   }
 
