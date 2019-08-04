@@ -349,15 +349,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/material/icon
-
-@angular/material/button
+@angular/forms
+MIT
 
 @angular/animations
 MIT
 
-@angular/forms
-MIT
+@angular/material/icon
+
+@angular/material/button
 
 @angular/router
 MIT
@@ -372,11 +372,11 @@ MIT
 
 @angular/material/snack-bar
 
-@angular/material/toolbar
-
 @angular/material/core
 
 @angular/material/list
+
+@angular/material/toolbar
 
 zone.js
 MIT
