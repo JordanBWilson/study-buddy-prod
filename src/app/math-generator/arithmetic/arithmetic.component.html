@@ -25,7 +25,7 @@
   </div>
 
   <mat-form-field>
-    <input matInput placeholder="Put Your Answer Here" [(ngModel)]="userAttempt" (ngModelChange)="detectUserInput($event)">
+    <input matInput placeholder="Put Your Answer Here" [(ngModel)]="userAttempt" (ngModelChange)="detectUserInput($event)" autocomplete="off">
   </mat-form-field>
 
   <button class="check-answer-btn" mat-raised-button color="primary" *ngIf="displayCheckAnswerButton" (click)="checkAnswer()">Check Your Answer</button>
