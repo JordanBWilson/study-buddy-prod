@@ -2,24 +2,24 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules  } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'landing', 
+  { path: 'landing',
     loadChildren: './landing-page/landing-page.module#LandingPageModule',
     pathMatch: 'full'
   },
-  { path: 'login-in', 
+  { path: 'login-in',
     loadChildren: './login/login.module#LoginModule'
   },
-  { path: 'sign-up', 
+  { path: 'sign-up',
     loadChildren: './sign-up/sign-up.module#SignUpModule'
   },
-  { path: 'dashboard', 
+  { path: 'dashboard',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
   { path: '',
-    redirectTo: '/landing', 
-    pathMatch: 'full' 
+    redirectTo: '/landing',
+    pathMatch: 'full'
   },
-  { path: '**', 
+  { path: '**',
     loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule'
   }
 ];
@@ -29,7 +29,7 @@ const routes: Routes = [
 
     preloadingStrategy: PreloadAllModules // <-This will load the other modules once the first module loads
   }
-    
+
     )],
   exports: [RouterModule]
 })

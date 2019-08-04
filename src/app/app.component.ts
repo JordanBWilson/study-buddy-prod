@@ -2,6 +2,21 @@ import { Component } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 
 @Component({
+  selector: 'app-bottom-sheet-navi',
+  templateUrl: 'app-global-navigation.html',
+})
+export class BottomSheetGlobalNavigationComponent {
+  constructor(private bottomSheetRef: MatBottomSheetRef<BottomSheetGlobalNavigationComponent>) {}
+
+  openLink(event: MouseEvent): void {
+    this.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+}
+
+
+
+@Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
@@ -15,7 +30,7 @@ export class AppComponent {
   constructor(private bottomSheet: MatBottomSheet) {}
 
   openBottomSheet(): void {
-    this.bottomSheet.open(BottomSheetGlobalNavigation);
+    this.bottomSheet.open(BottomSheetGlobalNavigationComponent);
   }
 
   componentAdded(event) {
@@ -23,8 +38,7 @@ export class AppComponent {
     if (event.page === 'Landing') {
 
       this.isLogoVisible = false;
-    }
-    else {
+    } else {
       this.isLogoVisible = true;
     }
 
@@ -40,18 +54,7 @@ export class AppComponent {
 
 }
 
-@Component({
-  selector: 'bottom-sheet-navi',
-  templateUrl: 'app-global-navigation.html',
-})
-export class BottomSheetGlobalNavigation {
-  constructor(private bottomSheetRef: MatBottomSheetRef<BottomSheetGlobalNavigation>) {}
 
-  openLink(event: MouseEvent): void {
-    this.bottomSheetRef.dismiss();
-    event.preventDefault();
-  }
-}
 
   // git commands
   // git init <-- starts looking for new changes. used before you work
