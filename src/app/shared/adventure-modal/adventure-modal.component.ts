@@ -22,7 +22,6 @@ export class AdventureModalComponent implements OnInit {
 
     this.selectedAdventureEmit.emit(this.selectedAdventure);
     this.adventureSelected = true;
-    console.log(this.adventureSelected);
   }
 
   selectAdventure(adventure: string) {
