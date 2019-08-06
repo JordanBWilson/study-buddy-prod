@@ -13,13 +13,15 @@ import { MatCardModule } from '@angular/material/card';
 import { ArithmeticComponent } from '../math-generator/arithmetic/arithmetic.component';
 import { ProbValidModalComponent } from '../shared/prob-valid-modal/prob-valid-modal.component';
 import { AdventureModalComponent } from '../shared/adventure-modal/adventure-modal.component';
+import { LevelSelectModalComponent } from '../shared/level-select-modal/level-select-modal.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ArithmeticComponent,
     ProbValidModalComponent,
-    AdventureModalComponent
+    AdventureModalComponent,
+    LevelSelectModalComponent
   ],
   imports: [
     DashboardRoutingModule,

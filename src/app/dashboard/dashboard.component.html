@@ -14,7 +14,17 @@
 
     <div *ngIf="adventureName === 'chef'" class="chef-adventure-wrapper">
 
-        <app-arithmetic></app-arithmetic>
+        <div class="lvl-container" *ngFor="let chef of chefMap">
+
+            <div class="lvl-wrapper ">
+
+
+            </div>
+
+            <p>{{chef.title}}</p>
+
+        </div>
+        
 
     </div>
 

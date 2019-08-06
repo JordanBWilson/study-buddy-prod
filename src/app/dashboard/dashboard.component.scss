@@ -8,3 +8,33 @@
 
     text-align: center;
 }
+
+.lvl-wrapper {
+
+    border-radius: 50px;
+    background-color: #673ab7;
+    height: 6em;
+    width: 6em;
+    display: inline-flex;
+    // margin-left: calc(14% - 0.1em);
+    color: white;
+    // margin-bottom: calc(9% - 0.1em);
+    // margin-top: calc(6% - 0.1em);
+}
+
+.chef-adventure-wrapper {
+
+    // display: flex;
+    display: inline-flex;
+    width: 100%;
+}
+
+.lvl-container {
+
+    // padding-left: calc(11% - 0.1em);
+    width: 100%;
+    // padding-right: calc(100% + 6em);
+    // width: calc(1% - 1em);
+    // padding-left: calc(13% - 0.1em);
+    // margin-left: calc(0% - 0.1em);
+}
